@@ -31,13 +31,13 @@ class SavingsAccount {
 
         System.out.println ("Withdrawal from account " + accountNumber );
         System.out.println("Amount : " + amount);
-
+        if (amount <= balance) {
         try {
             Thread.sleep(200);
         }
         catch(Exception e) {}
 
-        if (amount <= balance) {
+
             balance -= amount;
             result = true ;
             System.out.println("New balance : " + balance);
